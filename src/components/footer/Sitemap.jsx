@@ -119,14 +119,14 @@ export default function Sitemap({ list, isMenuDesign }) {
               {item?.menu &&
                 item?.menu.map((menu, i) => (
                   <MenuItem
-                  key={i}
-                  disableRipple
-                  sx={{ ...menuItemStyle, ...(isMenuDesign && { typography: 'caption2', fontWeight: 400, my: 0.25 }) }}
+                    key={i}
+                    disableRipple
+                    sx={{ ...menuItemStyle, ...(isMenuDesign && { typography: 'caption2', fontWeight: 400, my: 0.25, textWrap: 'wrap' }) }}
                     {...(menu.link && { component: NextLink, ...menu.link })}
                     tabIndex={0}
                     aria-label={menu.label}
-                    >
-                    {menu?.icon && menu.icon }
+                  >
+                    {menu?.icon && menu.icon}
                     {menu.label}
                   </MenuItem>
                 ))}

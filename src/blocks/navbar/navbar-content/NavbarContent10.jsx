@@ -46,8 +46,6 @@ export default function NavbarContent10({ landingBaseUrl, navItems, primaryBtn, 
       )}
       <Stack direction="row" sx={{ gap: { xs: 1, md: 1.5 } }}>
         {!downSM && (
-          <>
-            {/* <NavSecondaryButton {...secondaryBtn} /> */}
             <ButtonAnimationWrapper>
               {animated ? (
                 <motion.div
@@ -68,7 +66,6 @@ export default function NavbarContent10({ landingBaseUrl, navItems, primaryBtn, 
                 <NavPrimaryButton {...primaryBtn} />
               )}
             </ButtonAnimationWrapper>
-          </>
         )}
         {downMD && (
           <Box sx={{ flexGrow: 1 }}>
@@ -94,7 +91,7 @@ export default function NavbarContent10({ landingBaseUrl, navItems, primaryBtn, 
                 )}
                 {downSM && (
                   <Stack direction="row" sx={{ justifyContent: 'space-between', gap: 1, px: 2, py: 2.5, mx: -2, bgcolor: 'grey.100' }}>
-                    <NavSecondaryButton {...secondaryBtn} />
+                    {/* <NavSecondaryButton {...secondaryBtn} /> */}
                     <ButtonAnimationWrapper>
                       <NavPrimaryButton {...primaryBtn} />
                     </ButtonAnimationWrapper>
