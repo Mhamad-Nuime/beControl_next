@@ -1,0 +1,24 @@
+{
+  "brandName": "Be Control",
+  "title": "Industrial Solutions Company",
+  "company": {
+    "name": "Be Control",
+    "url": "https://phoenixcoded.net",
+    "socialLink": {
+      "linkedin": "https://in.linkedin.com/company/phoenixcoded",
+      "instagram": "#",
+      "facebook": "https://www.facebook.com/Phoenixcoded/",
+      "youtube": "https://www.youtube.com/@Phoenixcoded",
+      "github": "https://github.com/phoenixcoded",
+      "dribble": "https://dribbble.com/Phoenixcoded",
+      "discord": "https://discord.gg/gmqz4BWYA8",
+      "support": "https://codedthemes.support-hub.io/"
+    }
+  },
+  "logo": {
+    "main": "/assets/logo/logo-small.webp",
+    "logoIcon": "/assets/logo/logo-small.webp",
+    "logoFab": "/assets/logo/logo-small.webp",
+    "logoWatermark": "/assets/logo/logo-small.webp"
+  }
+}

@@ -1,0 +1,217 @@
+'use client';
+
+// @next
+import NextLink from 'next/link';
+
+// @mui
+import Grid from '@mui/material/Grid';
+import Link from '@mui/material/Link';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
+
+// @third-party
+import { motion } from 'framer-motion';
+
+// @project
+import branding from '@/branding.json';
+import { GraphicsCard } from '@/components/cards';
+import ContainerWrapper from '@/components/ContainerWrapper';
+import { Copyright, FollowUS, Sitemap } from '@/components/footer';
+import LogoSection from '@/components/logo';
+import SvgIcon from '@/components/SvgIcon';
+
+import { CopyrightType } from '@/enum';
+import { DOCS_URL, FREEBIES_URL } from '@/path';
+import { SECTION_COMMON_PY } from '@/utils/constant';
+
+/***************************  FOOTER - 7 DATA  ***************************/
+
+/**
+ *
+ * Demos:
+ * - [Footer7](https://www.saasable.io/blocks/footer/footer7)
+ */
+
+const linkProps = { target: '_self', rel: 'noopener noreferrer' };
+const iconProps = { color: 'text.secondary' };
+const data = [
+  // {
+  //   id: 'resources',
+  //   grid: { size: { xs: 12, sm: 'auto' } },
+  //   title: 'Resources',
+  //   menu: [
+  //     {
+  //       label: 'Freebies',
+  //       link: { href: FREEBIES_URL, ...linkProps }
+  //     },
+  //     {
+  //       label: 'Documentation',
+  //       link: { href: DOCS_URL, ...linkProps }
+  //     },
+  //     {
+  //       label: 'Blog',
+  //       link: { href: 'https://blog.saasable.io/', ...linkProps }
+  //     },
+  //     {
+  //       label: 'Refund Policy',
+  //       link: { href: 'https://mui.com/store/customer-refund-policy/', ...linkProps }
+  //     }
+  //   ]
+  // },
+  {
+    id: 'Links',
+    grid: { size: { xs: 6, sm: 'auto' } },
+    title: 'Links',
+    menu: [
+      {
+        label: 'Home',
+        link: {
+          href: '/',
+          ...linkProps
+        }
+      },
+      {
+        label: 'Divisions',
+        link: { href: '/divisions', ...linkProps }
+      },
+      {
+        label: 'Projects',
+        link: { href: '/projects', ...linkProps }
+      },
+      {
+        label: 'About',
+        link: { href: '/about-us', ...linkProps }
+      },
+      {
+        label: 'Blog',
+        link: { href: '/blog  ', ...linkProps }
+      },
+      {
+        label: 'Contact Us',
+        link: { href: '/contact  ', ...linkProps }
+      },
+    ]
+  },
+  {
+    id: 'Contact Info',
+    grid: { size: { xs: 6, sm: 'auto' } },
+    title: 'Contact Info',
+    menu: [
+      {
+        label: '+963 11 691 7409',
+        link: { href: 'tel:+963116917409', ...linkProps },
+        icon: <img src="/assets/svg/landline.svg" alt="dsfsdfsd" width={16} style={{ marginInlineEnd: 4 }} />
+      },
+      {
+        label: '+963 938 11 2059',
+        link: { href: 'tel:+963938112059', ...linkProps },
+        icon: <img src="/assets/svg/phone.svg" alt="dsfsdfsd" width={16} style={{ marginInlineEnd: 4 }} />
+      },
+      {
+        label: '+963 967 52 1129',
+        link: { href: 'https://wa.me/963967521129', ...linkProps },
+        icon: <img src="/assets/svg/whatsapp.svg" alt="dsfsdfsd" width={16} style={{ marginInlineEnd: 4 }} />
+      },
+      {
+        label: ' Sahnaya, Rif Damascus, Syria ',
+        icon: <img src="/assets/svg/location.svg" alt="dsfsdfsd" width={16} style={{ marginInlineEnd: 4 }} />
+      }
+    ]
+  }
+];
+
+// const iconProps = { color: 'text.secondary' };
+
+const usefullLinks = [
+  // {
+  //   icon: <SvgIcon name="tabler-brand-figma" {...iconProps} />,
+  //   title: 'Figma Version 1.1.0',
+  //   href: 'https://www.figma.com/community/file/1425095061180549847'
+  // },
+  // {
+  //   icon: <SvgIcon name="tabler-route" {...iconProps} />,
+  //   title: 'React Material UI v7',
+  //   href: 'https://mui.com/material-ui/getting-started'
+  // },
+  // {
+  //   icon: <SvgIcon name="tabler-sparkles" {...iconProps} />,
+  //   title: 'Documentation',
+  //   href: DOCS_URL
+  // }
+];
+
+/***************************  FOOTER - 7  ***************************/
+
+export default function Footer7() {
+  const logoFollowContent = (
+    <Stack sx={{ alignItems: 'flex-start', gap: { xs: 1.5, sm: 3 } }}>
+      <LogoSection />
+      {/* <Typography variant="h6" sx={{ maxWidth: { sm: 280 }, mb: { xs: -1, sm: -2.5 } }}>
+        {process.env.NEXT_PUBLIC_VERSION}
+      </Typography> */}
+      <Typography variant="body2" sx={{ maxWidth: { sm: 280 }, mt: 2 }}>
+        Leading the way in integrated solutions, we harness science and technology to shape a smarter, brighter future.
+      </Typography>
+    </Stack>
+  );
+
+  return (
+    <ContainerWrapper sx={{ py: SECTION_COMMON_PY }}>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 0.5,
+          delay: 0.4
+        }}
+      >
+        <Stack id="footer-7" role="contentinfo" rel="noopener noreferrer" aria-label="Footer 7" sx={{ gap: { xs: 3, sm: 4, md: 5 } }}>
+          <Grid container spacing={{ xs: 4, md: 3 }}>
+            <Grid size={{ xs: 12, md: 6 }}>
+              <Stack direction={{ sm: 'row', md: 'column' }} sx={{ gap: 3, justifyContent: 'space-between', height: 1 }}>
+                {logoFollowContent}
+                <Stack sx={{ gap: { xs: 2, sm: 2.5, md: 3 } }}>
+                  {usefullLinks.map((item, index) => (
+                    <Stack direction="row" sx={{ gap: 1, alignItems: 'center' }} key={index}>
+                      {item.icon}
+                      <Link
+                        component={NextLink}
+                        variant="body2"
+                        color="text.secondary"
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Usefull Links"
+                      >
+                        {item.title}
+                      </Link>
+                    </Stack>
+                  ))}
+                </Stack>
+              </Stack>
+            </Grid>
+            <Grid size={{ xs: 12, md: 6 }}>
+              <Sitemap list={data} isMenuDesign />
+            </Grid>
+          </Grid>
+          <GraphicsCard sx={{ borderRadius: { xs: 6, sm: 8 } }}>
+            <Stack
+              direction={{ sm: 'row' }}
+              sx={{
+                alignItems: 'center',
+                justifyContent: { xs: 'center', sm: 'space-between' },
+                gap: 1.5,
+                py: { xs: 2, sm: 1.5 },
+                px: { xs: 2, sm: 3 }
+              }}
+            >
+              <Copyright type={CopyrightType.TYPE3} />
+              <FollowUS heading={false} color="grey.100" />
+            </Stack>
+          </GraphicsCard>
+        </Stack>
+      </motion.div>
+    </ContainerWrapper>
+  );
+}

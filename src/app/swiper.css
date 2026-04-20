@@ -1,0 +1,6 @@
+html {
+    --swiper-navigation-sides-offset : 30%;
+    --swiper-navigation-top-offset : 90%;
+    --swiper-navigation-color : var(--palette-primary-main);
+    --swiper-pagination-color : var(--palette-primary-main);
+}
